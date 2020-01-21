@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    tools:context="com.example.ahsan.pocketecg.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/Graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:orientation="horizontal" />
+
+
+    <!--<com.jjoe64.graphview.GraphView-->
+    <!--android:id="@+id/Graph"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="15"-->
+    <!--android:orientation="horizontal" />-->
+
+
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/Graph"
+        android:layout_weight="85"
+        android:background="#12918786"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pocket ECG"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/btConnect1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="C1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btConnect2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="C2"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!--<Button-->
+        <!--android:id="@+id/btConnect1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tvBluetooth"-->
+        <!--android:text="Connect 1"-->
+        <!--android:textSize="10dp"/>-->
+        <!--<Button-->
+        <!--android:id="@+id/btConnect2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="10dp"-->
+        <!--android:text="Connect 2"-->
+        <!--android:layout_below="@+id/btConnect1"/>-->
+        <Button
+            android:id="@+id/btDisConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btConnect2"
+            android:text="Disconnect"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btDisConnect"
+            android:text="Clear"
+            android:textColor="#C71809"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/tbStream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btClear"
+            android:checked="true"
+            android:text="ToggleButton"
+            android:textOff="Start Stream"
+            android:textOn="Stop Stream"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/tbScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tbStream"
+            android:text="ToggleButton"
+            android:textOff="Auto Scroll"
+            android:textOn="Auto Scroll"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/tbLock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tbScroll"
+            android:text="ToggleButton"
+            android:textOff="Lock X axis"
+            android:textOn="Unlck X asxis"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/LL3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/Graph"
+            android:layout_weight="85"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dataText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="....."
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/dataText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30sp"-->
+        <!--android:layout_below="@+id/tbLock"-->
+        <!--android:layout_weight="60"-->
+        <!--android:background="#CDDC39"-->
+        <!--android:text="TextView"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@android:color/holo_red_dark"-->
+        <!--android:textStyle="bold" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/btXminus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="+"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btXplus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="-"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
